@@ -1,0 +1,44 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway # 服务名称
+  redis:
+    host: localhost
+    port: 6379
+    password: ezreal
+  cloud:
+    nacos:
+      server-addr: 43.139.44.154:8848 # nacos地址
+    gateway:
+      routes: # 网关配置
+        - id: seckill-good
+          uri: lb://seckill-good
+          predicates:
+            - Path=/api/good/**
+        - id: seckill-activity
+          uri: lb://seckill-activity
+          predicates:
+            - Path=/api/activity/**
+        - id: seckill-order
+          uri: lb://seckill-order
+          predicates:
+            - Path=/api/order/**,/api/bucket/**
+
+rules:
+  enable: true
+  ipRule:
+    enable: true
+    windowPeriod: 1000
+    windowSize: 5
+  pathRule:
+    enable: true
+    windowPeriod: 1000
+    windowSize: 5
+    urlPaths:
+      - path: /**
+        enable: true
+        windowPeriod: 1000
+        windowSize: 3
+  accountRule:
+    enable: true

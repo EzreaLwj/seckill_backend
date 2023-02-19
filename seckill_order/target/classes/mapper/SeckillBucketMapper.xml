@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezreal.order.mapper.SeckillBucketMapper">
+
+    <resultMap id="BaseResultMap" type="com.ezreal.common.model.domain.SeckillBucket">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="itemId" column="item_id" jdbcType="BIGINT"/>
+        <result property="totalStocksAmount" column="total_stocks_amount" jdbcType="INTEGER"/>
+        <result property="availableStocksAmount" column="available_stocks_amount" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="serialNo" column="serial_no" jdbcType="INTEGER"/>
+        <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_id,total_stocks_amount,
+        available_stocks_amount,status,serial_no,
+        modified_time,create_time
+    </sql>
+    <select id="selectByItemId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from seckill_bucket
+        where
+        item_id = #{itemId,jdbcType=NUMERIC}
+    </select>
+    <insert id="insertBatch">
+        insert into seckill_bucket(id,item_id,total_stocks_amount,
+        available_stocks_amount,status,serial_no,
+        modified_time,create_time)
+        values
+        <foreach collection="seckillBucketCollection" item="item" separator=",">
+            (#{item.id,jdbcType=NUMERIC},#{item.itemId,jdbcType=NUMERIC},#{item.totalStocksAmount,jdbcType=NUMERIC},
+            #{item.availableStocksAmount,jdbcType=NUMERIC},#{item.status,jdbcType=NUMERIC},#{item.serialNo,jdbcType=NUMERIC},
+            #{item.modifiedTime,jdbcType=TIMESTAMP},#{item.createTime,jdbcType=TIMESTAMP})
+        </foreach>
+    </insert>
+    <update id="updateStatusByItemId">
+        update seckill_bucket
+        set status = #{status,jdbcType=NUMERIC}
+        where item_id = #{itemId,jdbcType=NUMERIC}
+    </update>
+    <update id="decreaseBucketStock">
+        update seckill_bucket
+        set available_stocks_amount = available_stocks_amount - #{quantity,jdbcType=NUMERIC}
+        where item_id = #{itemId,jdbcType=NUMERIC}
+          AND serial_no = #{serialNo,jdbcType=NUMERIC}
+          AND available_stocks_amount = #{oldAvailableStocksAmount,jdbcType=NUMERIC}
+          AND available_stocks_amount <![CDATA[  >= ]]> #{quantity,jdbcType=NUMERIC}
+    </update>
+
+    <update id="increaseBucketStock">
+        update seckill_bucket
+        set available_stocks_amount = available_stocks_amount + #{quantity,jdbcType=NUMERIC}
+        where item_id = #{itemId,jdbcType=NUMERIC}
+          AND serial_no = #{serialNo,jdbcType=NUMERIC}
+          AND available_stocks_amount = #{oldAvailableStocksAmount,jdbcType=NUMERIC}
+          AND available_stocks_amount <![CDATA[  >= ]]> #{quantity,jdbcType=NUMERIC}
+    </update>
+
+    <select id="selectByItemIdAndSerialNo" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from seckill_bucket
+        where
+        item_id = #{itemId,jdbcType=NUMERIC}
+        AND serial_no = #{serialNo,jdbcType=NUMERIC}
+    </select>
+</mapper>

@@ -1,0 +1,17 @@
+rules:
+  enable: true
+  ipRule:
+    enable: true
+    windowPeriod: 1000
+    windowSize: 5
+  pathRule:
+    enable: true
+    windowPeriod: 1000
+    windowSize: 5
+    urlPaths:
+      - path: /**
+        enable: true
+        windowPeriod: 1000
+        windowSize: 3
+  accountRule:
+    enable: true

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: seckill-good # 项目名称
+  profiles:
+    active: dev # 开发环境
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 43.139.44.154:8848 # 注册中心的地址
+      config:
+        file-extension: yml # 文件后缀名

@@ -1,0 +1,87 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /api
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1 # 上传文件的值 -1为不受限制
+      max-request-size: -1
+  mvc:
+    pathmatch:
+      # 配置策略
+      matching-strategy: ant-path-matcher
+  redis:
+    host: localhost
+    port: 6379
+    password: ezreal
+  rabbitmq:
+    host: 43.139.44.154
+    port: 5672
+    username: admin
+    password: 123
+    publisher-confirm-type: correlated  # 交换机回退消息
+    template:
+      mandatory: true # 队列回退消息
+  shardingsphere:
+    datasource:
+      names: seckill,seckill0,seckill1
+      seckill:
+        type: org.apache.commons.dbcp2.BasicDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/seckill?useSSL=false&characterEncoding=utf-8&serverTimezone=Hongkong
+        username: root
+        password: ezreal
+      seckill0:
+        type: org.apache.commons.dbcp2.BasicDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/seckill0?useSSL=false&characterEncoding=utf-8&serverTimezone=Hongkong
+        username: root
+        password: ezreal
+      seckill1:
+        type: org.apache.commons.dbcp2.BasicDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/seckill1?useSSL=false&characterEncoding=utf-8&serverTimezone=Hongkong
+        username: root
+        password: ezreal
+    sharding:
+      tables:
+        seckill_bucket:
+          databaseStrategy:
+            inline:
+              shardingColumn: item_id
+              algorithmExpression: seckill$->{item_id % 2}
+          actualDataNodes: seckill${0..1}.seckill_bucket_${0..2}
+          tableStrategy:
+            inline:
+              shardingColumn: item_id
+              algorithmExpression: seckill_bucket_${item_id % 3}
+          keyGenerator:
+            column: id
+            type: SNOWFLAKE
+        seckill_order:
+          databaseStrategy:
+            inline:
+              shardingColumn: item_id
+              algorithmExpression: seckill$->{item_id % 2}
+          actualDataNodes: seckill${0..1}.seckill_order_${0..2}
+          tableStrategy:
+            inline:
+              shardingColumn: item_id
+              algorithmExpression: seckill_order_${item_id % 3}
+          keyGenerator:
+            column: id
+            type: SNOWFLAKE
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: assign_id
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+place_order_type: buckets

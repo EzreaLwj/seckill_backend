@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezreal.goods.mapper.SeckillGoodMapper">
+
+    <resultMap id="BaseResultMap" type="com.ezreal.common.model.domain.SeckillGood">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="itemTitle" column="item_title" jdbcType="VARCHAR"/>
+            <result property="itemSubTitle" column="item_sub_title" jdbcType="VARCHAR"/>
+            <result property="itemDesc" column="item_desc" jdbcType="VARCHAR"/>
+            <result property="initialStock" column="initial_stock" jdbcType="INTEGER"/>
+            <result property="availableStock" column="available_stock" jdbcType="INTEGER"/>
+            <result property="stockWarmUp" column="stock_warm_up" jdbcType="INTEGER"/>
+            <result property="originalPrice" column="original_price" jdbcType="BIGINT"/>
+            <result property="flashPrice" column="flash_price" jdbcType="BIGINT"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="rules" column="rules" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="activityId" column="activity_id" jdbcType="BIGINT"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_title,item_sub_title,
+        item_desc,initial_stock,available_stock,
+        stock_warm_up,original_price,flash_price,
+        start_time,end_time,rules,
+        status,activity_id,modified_time,
+        create_time
+    </sql>
+    <update id="decreaseAvailableStockById">
+        update seckill_good
+        set available_stock = available_stock - #{quantity,jdbcType=NUMERIC}
+        where id = #{id,jdbcType=NUMERIC} and available_stock = #{oldAvailableStock,jdbcType=NUMERIC} and available_stock <![CDATA[ >= ]]> #{quantity,jdbcType=NUMERIC}
+    </update>
+
+    <update id="increaseAvailableStockById">
+        update seckill_good
+        set available_stock = available_stock + #{quantity,jdbcType=NUMERIC}
+        where id = #{id,jdbcType=NUMERIC} and available_stock = #{oldAvailableStock,jdbcType=NUMERIC}
+    </update>
+    <select id="selectAvailableStockById" resultType="Integer">
+        select available_stock
+        from seckill_good
+        where id = #{id,jdbcType=NUMERIC}
+    </select>
+</mapper>

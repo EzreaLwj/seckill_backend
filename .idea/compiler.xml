@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="seckill_goods" />
+        <module name="utils" />
+        <module name="seckill_user" />
+        <module name="seckill_activity" />
+        <module name="seckill_order" />
+        <module name="feign_api" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="8" />
+      <module name="feign_api" target="8" />
+      <module name="gateway" target="8" />
+      <module name="seckill_activity" target="8" />
+      <module name="seckill_backend" target="8" />
+      <module name="seckill_goods" target="8" />
+      <module name="seckill_order" target="8" />
+      <module name="seckill_user" target="8" />
+      <module name="utils" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="feign_api" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="seckill_activity" options="-parameters" />
+      <module name="seckill_backend" options="-parameters" />
+      <module name="seckill_goods" options="-parameters" />
+      <module name="seckill_order" options="-parameters" />
+      <module name="seckill_user" options="-parameters" />
+      <module name="utils" options="-parameters" />
+    </option>
+  </component>
+</project>

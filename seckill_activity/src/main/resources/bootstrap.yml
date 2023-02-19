@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: seckill-activity # 项目名称
+  profiles:
+    active: dev # 开发环境
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 43.139.44.154:8848 # 注册中心的地址
+      config:
+        file-extension: yml # 文件后缀名
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8080
+        port: 8720
+

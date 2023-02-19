@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezreal.order.mapper.SeckillOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.ezreal.common.model.domain.SeckillOrder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="itemId" column="item_id" jdbcType="BIGINT"/>
+            <result property="activityId" column="activity_id" jdbcType="BIGINT"/>
+            <result property="itemTitle" column="item_title" jdbcType="VARCHAR"/>
+            <result property="flashPrice" column="flash_price" jdbcType="BIGINT"/>
+            <result property="quantity" column="quantity" jdbcType="INTEGER"/>
+            <result property="totalAmount" column="total_amount" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="modifiedTime" column="modified_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_id,activity_id,
+        item_title,flash_price,quantity,
+        total_amount,status,user_id,
+        modified_time,create_time
+    </sql>
+</mapper>

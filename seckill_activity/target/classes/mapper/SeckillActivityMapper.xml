@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezreal.activity.mapper.SeckillActivityMapper">
+
+    <resultMap id="BaseResultMap" type="com.ezreal.common.model.domain.SeckillActivity">
+            <id property="activityId" column="activity_id" jdbcType="BIGINT"/>
+            <result property="activityName" column="activity_name" jdbcType="VARCHAR"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="activityStatus" column="activity_status" jdbcType="INTEGER"/>
+            <result property="activityDesc" column="activity_desc" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        activity_id,activity_name,start_time,
+        end_time,activity_status,activity_desc
+    </sql>
+</mapper>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c35f7f92-e70e-40a3-be05-68cdcac00528" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/seckill_order/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill_order/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seckill_order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seckill_order/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="NewLua" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="mavenProperties">
+      <map>
+        <entry key="archetypeCatalog" value="internal" />
+      </map>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2I7Z9qVyV4DD7WE9uinsAWy4is7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.18164062" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA_PROJECT2\seckill_backend\seckill_order\src\main\resources\mapper" />
+      <recent name="D:\IDEA_PROJECT2\seckill_backend\seckill_order\src\main\java\com\ezreal\order\service\impl" />
+      <recent name="D:\IDEA_PROJECT2\seckill_backend\seckill_order\src\main\java\com\ezreal\order\service" />
+      <recent name="D:\IDEA_PROJECT2\seckill_backend\seckill_goods\src\main\resources" />
+      <recent name="D:\IDEA_PROJECT2\seckill_backend\seckill_user\src\main\java\com\ezreal\user\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ezreal.exception" />
+      <recent name="com.ezreal.security.model" />
+      <recent name="com.ezreal.utils" />
+      <recent name="com.ezreal.order.mapper" />
+      <recent name="com.ezreal.order.controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.generated-requests | #2">
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="SeckillActivityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="seckill_activity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezreal.activity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ezreal.activity.SeckillActivityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillGoodApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="seckill_goods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezreal.goods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ezreal.goods.SeckillGoodApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="seckill_order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezreal.order.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ezreal.order.SeckillOrderApplication" />
+      <option name="ACTIVE_PROFILES" value="local" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="seckill_user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ezreal.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ezreal.user.SeckillUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.generated-requests | #2" />
+      <item itemvalue="Spring Boot.SeckillOrderApplication" />
+      <item itemvalue="Spring Boot.SeckillGoodApplication" />
+      <item itemvalue="Spring Boot.SeckillUserApplication" />
+      <item itemvalue="Spring Boot.SeckillActivityApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SeckillGoodApplication" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="Spring Boot.SeckillUserApplication" />
+        <item itemvalue="Spring Boot.SeckillOrderApplication" />
+        <item itemvalue="Spring Boot.SeckillActivityApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c35f7f92-e70e-40a3-be05-68cdcac00528" name="Changes" comment="" />
+      <created>1669534434853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669534434853</updated>
+      <workItem from="1669534436279" duration="1467000" />
+      <workItem from="1670157439628" duration="319000" />
+      <workItem from="1672230656684" duration="48000" />
+      <workItem from="1672494549981" duration="5195000" />
+      <workItem from="1672541596756" duration="8484000" />
+      <workItem from="1672625128937" duration="1699000" />
+      <workItem from="1672627758548" duration="17490000" />
+      <workItem from="1672655321491" duration="17139000" />
+      <workItem from="1672710715424" duration="24240000" />
+      <workItem from="1672800287587" duration="1352000" />
+      <workItem from="1672802064488" duration="4353000" />
+      <workItem from="1672806695309" duration="69806000" />
+      <workItem from="1672995264219" duration="21990000" />
+      <workItem from="1673068404218" duration="27702000" />
+      <workItem from="1673144385060" duration="21224000" />
+      <workItem from="1673186074185" duration="12594000" />
+      <workItem from="1673231261071" duration="42929000" />
+      <workItem from="1673319398857" duration="27774000" />
+      <workItem from="1673404455106" duration="29025000" />
+      <workItem from="1673521720427" duration="13568000" />
+      <workItem from="1673576436668" duration="31770000" />
+      <workItem from="1673666552713" duration="15000" />
+      <workItem from="1673956466667" duration="4742000" />
+      <workItem from="1673963199419" duration="9412000" />
+      <workItem from="1674018809253" duration="22097000" />
+      <workItem from="1674095806591" duration="28462000" />
+      <workItem from="1674217359037" duration="13664000" />
+      <workItem from="1674236077291" duration="427000" />
+      <workItem from="1674268293495" duration="1042000" />
+      <workItem from="1674291061036" duration="2797000" />
+      <workItem from="1674890030714" duration="1412000" />
+      <workItem from="1676010705564" duration="1226000" />
+      <workItem from="1676079214722" duration="17697000" />
+      <workItem from="1676162050382" duration="2711000" />
+      <workItem from="1676381699848" duration="16000" />
+      <workItem from="1676733646648" duration="713000" />
+      <workItem from="1676818188449" duration="334000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ezreal/security/service/impl/AuthorizationServiceImpl.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/seckill_order/src/main/java/com/ezreal/order/mq/receiver/OrderTaskReceiver.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/seckill_order/src/main/java/com/ezreal/order/service/impl/bucket/BucketsCacheServiceImpl.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
